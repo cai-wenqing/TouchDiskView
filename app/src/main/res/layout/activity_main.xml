@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.cwq.touchdiskview.MainActivity">
+
+    <com.cwq.library.TouchDiskView
+        android:id="@+id/main_touchdiskview"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        app:disk_bg="@mipmap/sample1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/main_tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="旋转监听"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_touchdiskview" />
+
+
+    <Button
+        android:id="@+id/main_btn_rotateleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="左转一格"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/main_btn_rotateright"
+        app:layout_constraintTop_toBottomOf="@id/main_tv_count" />
+
+    <Button
+        android:id="@+id/main_btn_rotateright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="右转一格"
+        app:layout_constraintLeft_toRightOf="@id/main_btn_rotateleft"
+        app:layout_constraintRight_toLeftOf="@id/main_btn_switch"
+        app:layout_constraintTop_toBottomOf="@id/main_tv_count" />
+
+    <Button
+        android:id="@+id/main_btn_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="已开启触摸"
+        app:layout_constraintLeft_toRightOf="@id/main_btn_rotateright"
+        app:layout_constraintRight_toLeftOf="@id/main_btn_picrotate"
+        app:layout_constraintTop_toBottomOf="@id/main_tv_count" />
+
+
+    <Button
+        android:id="@+id/main_btn_picrotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="图片旋转已开"
+        app:layout_constraintLeft_toRightOf="@id/main_btn_switch"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_tv_count" />
+
+
+    <Button
+        android:id="@+id/main_jump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转页面"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>
